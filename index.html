@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Landing Page - Start Bootstrap Theme</title>
+
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!-- Custom styles for this page -->
+      <link href="css/landing-page.css" rel="stylesheet">
+      
+      <!-- Bootstrap core JavaScript -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+   </head>
+
+   <body>
+      <script id="options-template" type="text/x-handlebars-template">
+         <ul>
+            {{#each options}}
+               {{#if selected}}
+                  <li class="selected"><a href="{{url}}">{{name}}</a></li>
+               {{else}}
+                  <li><a href="{{url}}">{{name}}</a></li>
+               {{/if}}
+            {{/each}}
+         </ul>
+      </script>
+      
+      <main>
+         <nav class="row breadcrumb">
+            
+            <div class="arrow-hack"></div>
+            <div id="target"></div>
+            <div class="login">
+               <a href="#">Login</a>
+            </div>
+         </nav>
+         
+         <section class="splash-image">
+            <div class="row">
+               <img src="https://picsum.photos/513/80">
+            </div>
+         </section>
+         
+         <section class="info">
+            <article class="main-info">
+               <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                     <img src="https://picsum.photos/400/300">
+                  </div>
+                  <div class="description col-md-6 col-sm-12">
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipiscing, elit arcu ultricies lectus tincidunt augue mollis, natoque non odio mus vulputate. Convallis quam semper lacinia dignissim erat porttitor aliquam porta, ultrices facilisi molestie rutrum imperdiet commodo dui, torquent leo sociis cubilia odio diam orci. Lectus semper viverra sapien fringilla vel libero consequat varius, auctor vehicula ac tortor arcu lacus quis nulla faucibus, vestibulum rhoncus turpis quisque curae a risus.
+                     </p>
+                     <p>
+                        Porttitor massa dictum leo gravida pellentesque class accumsan, fusce nibh hendrerit phasellus sagittis nullam id tempor, nisl cum proin morbi enim non. Mattis interdum ultricies consequat himenaeos libero scelerisque, mauris neque at dis venenatis convallis proin, torquent nisi urna condimentum in. Semper pharetra porttitor faucibus litora aptent magnis lectus euismod netus, tellus penatibus vehicula congue cubilia ante dis cursus, hendrerit viverra id suspendisse a egestas magna turpis.
+                     </p>
+                  </div>
+               </div>
+            </article>
+         </section>
+         
+         <section class="detail">
+            <nav>
+               <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item">
+                     <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" id="products-tab" data-toggle="tab" href="#products" role="tab" aria-controls="products" aria-selected="true">Products</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" id="home-about" data-toggle="tab" href="#about" role="tab" aria-controls="about">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" id="home-contact" data-toggle="tab" href="#contact" role="tab" aria-controls="contact">Contact</a>
+                  </li>
+                  <li class="search-box">
+                     <span class="fa fa-search"></span>
+                     <input type="text" class="form-control" placeholder="Search..." />
+                  </li>
+               </ul>
+            </nav>
+            <div class="tab-content">
+               <article class="tab-pane fade content" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <h3>Home</h3>
+               </article>
+               <article class="tab-pane fade content show active" id="products" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="row">
+                     <div class="list-options col-md-5 col-sm-12">
+                        <div class="list-group">
+                           <button type="button" class="list-group-item list-group-item-action">Cras justo odio</button>
+                           <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+                           <button type="button" class="list-group-item list-group-item-action active">Morbi leo risus</button>
+                           <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
+                           <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
+                        </div>
+                     </div>
+                     <div class="description col-md-7 col-sm-12">
+                        <p>
+                           Lorem ipsum dolor sit amet consectetur adipiscing, elit arcu ultricies lectus tincidunt augue mollis, natoque non odio mus vulputate. Convallis quam semper lacinia dignissim erat porttitor aliquam porta, ultrices facilisi molestie rutrum imperdiet commodo dui, torquent leo sociis cubilia odio diam orci. Lectus semper viverra sapien fringilla vel libero consequat varius, auctor vehicula ac tortor arcu lacus quis nulla faucibus, vestibulum rhoncus turpis quisque curae a risus.
+                        </p>
+                        <p>
+                           Porttitor massa dictum leo gravida pellentesque class accumsan, fusce nibh hendrerit phasellus sagittis nullam id tempor, nisl cum proin morbi enim non. Mattis interdum ultricies consequat himenaeos libero scelerisque, mauris neque at dis venenatis convallis proin, torquent nisi urna condimentum in. Semper pharetra porttitor faucibus litora aptent magnis lectus euismod netus, tellus penatibus vehicula congue cubilia ante dis cursus, hendrerit viverra id suspendisse a egestas magna turpis.
+                        </p>
+                     </div>
+                  </div>
+               </article>
+               <article class="tab-pane fade content" id="about" role="tabpanel" aria-labelledby="about-tab">
+                  <h3>About</h3>
+               </article>
+               <article class="tab-pane fade content" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                  <h3>Contact</h3>
+               </article>
+            </div>
+         </section>
+         
+         <div class="row stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+         </div>
+      </main>
+      
+
+      <script>
+         $(document).ready(function(){
+             $(".nav-tabs a").click(function(){
+                 $(this).tab('show');
+             });
+         });
+
+
+         window.onload = function() {
+           //Grab the inline template
+           var template = $("#options-template").html();
+
+           //Compile the template
+           var compiled_template = Handlebars.compile(template);
+
+           //Render the data into the template
+           var rendered = compiled_template({options: [{ name: "Home", url: "#", selected: false},
+                                                       { name: "Level 1", url: "#", selected: false},
+                                                       { name: "Level 2", url: "#", selected: false},
+                                                       { name: "Level 3", url: "#", selected: false},
+                                                       { name: "Last", url: "#", selected: true}]});
+
+           //Overwrite the contents of #target with the renderer HTML
+           document.getElementById('target').innerHTML = rendered;
+         }
+      
+      </script>
+      
+   </body>
+
+</html>
